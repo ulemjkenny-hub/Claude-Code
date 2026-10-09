@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Big Cycle Monitor</title>
+<meta name="description" content="Where are the world's top economies in the long-term debt cycle and the Big Cycle? A Ray Dalio–framework dashboard with live macro and market data, risk scoring and debt projections.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111a24'/%3E%3Cpath d='M3 24C9 24 9 8 16 8s7 16 13 16' fill='none' stroke='%235aa9ff' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="sr" href="#view">Skip to content</a>
+<header class="top">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--panel2)"/><path d="M3 24C9 24 9 8 16 8s7 16 13 16" fill="none" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/><circle cx="21.5" cy="12.5" r="2.6" fill="var(--warn)"/></svg>
+    <div>Big Cycle Monitor<small>Debt cycles · Order &amp; disorder · Risk</small></div>
+  </div>
+  <nav id="nav" aria-label="Main">
+    <a href="#/overview" data-r="overview">Overview</a>
+    <a href="#/cycle" data-r="cycle">Cycle Lab</a>
+    <a href="#/matrix" data-r="matrix">Risk &amp; Forecast</a>
+    <a href="#/compare" data-r="compare">Compare</a>
+    <a href="#/book" data-r="book">Book Explorer</a>
+    <a href="#/method" data-r="method">Method &amp; Sources</a>
+  </nav>
+  <div class="tools">
+    <select id="jump" aria-label="Jump to country"></select>
+    <button class="pill off" id="livepill" aria-haspopup="true" aria-expanded="false"><span class="dot"></span><span id="livetxt">Loading…</span></button>
+    <button class="btn" id="theme" aria-label="Toggle theme" title="Toggle light / dark">Theme</button>
+  </div>
+</header>
+<div class="ticker" id="ticker" aria-label="Live market ticker"></div>
+<main id="view" tabindex="-1"></main>
+<footer>
+  Educational analysis built on Ray Dalio’s publicly described Big Cycle and debt-cycle frameworks. It is not investment advice. Scores combine official data (IMF / World Bank, when reachable) with analyst judgement that you can override. Figures marked “snapshot” are approximate fallbacks.
+</footer>
+<script src="js/vendor/d3.min.js"></script>
+<script src="js/vendor/topojson-client.min.js"></script>
+<script src="data/world.js"></script>
+<script src="js/data.js"></script>
+<script src="js/model.js"></script>
+<script src="js/live.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
